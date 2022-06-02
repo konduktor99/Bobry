@@ -1,0 +1,95 @@
+
+.button
+{
+    -fx-background-color : #3aa659;
+    -fx-background-radius : 10 10 10 10;
+     -fx-text-fill : #d9ba1e;
+}
+
+
+.button:hover
+{
+    -fx-background-color : #109415;
+    -fx-background-radius : 25;
+     -fx-text-fill : #d9ba1e;
+
+
+}
+
+#returnButton
+{
+    -fx-background-color : #9c9a9a;
+    -fx-background-radius : 10 10 10 10;
+}
+
+
+#returnButton:hover
+{
+    -fx-background-color : #969595;
+     -fx-background-radius : 25;
+     -fx-text-fill : #d9ba1e;
+
+}
+
+.button:pressed
+{
+    -fx-background-color : #53cfc2;
+    -fx-background-radius : 25;
+    -fx-text-fill : black;
+
+}
+
+.table-view, .list-view{
+ -fx-background-color : #501f87;
+  -fx-background-radius : 10 10 10 10;
+  -fx-text-fill : white;
+
+}
+
+.table-view .column-header-background {
+    -fx-background-color : #2d0954;
+    -fx-background-radius : 20;
+
+}
+.table-view .column-header {
+    -fx-background-color:transparent;
+}
+
+ .label {
+    -fx-text-fill: white;
+
+}
+
+.table-view .table-cell ,.list-view .list-cell{
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+
+}
+
+.table-row-cell: odd, .list-cell:odd{
+    -fx-background-color: #93f9b911;
+
+}
+.table-row-cell: even, .list-cell:even{
+    -fx-background-color: #1dbbdd11;
+
+}
+.table-row-cell: hover {
+    -fx-background-color: #e3ce94;
+    -fx-text-fill: red;
+}
+
+.table-row-cell: selected{
+    -fx-background-color: #a87e08;
+}
+
+
+#selectedPane{
+    -fx-background-color: radial-gradient(center 50% 50% , radius 50% , #aa07f5, #6c807f);
+    -fx-background-radius: 40;
+     -fx-border-color: #a6edec ;
+     -fx-border-width: 3 ;
+     -fx-border-radius: 40;
+
+}

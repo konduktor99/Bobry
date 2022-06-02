@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxWidth="1300.0" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #3f8191;" xmlns="http://javafx.com/javafx/13.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bobry.Controller.PhysioListController">
+   <children>
+      <TableView fx:id="physioTable" layoutX="357.0" layoutY="264.0" onMouseClicked="#handlePhysioChoice" prefHeight="406.0" prefWidth="602.0" stylesheets="@styles/main-style.css" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="264.0">
+        <columns>
+          <TableColumn fx:id="firstNameCol" prefWidth="150.0" text="FIRST NAME" />
+          <TableColumn fx:id="lastNameCol" prefWidth="150.0" text="LAST NAME" />
+            <TableColumn fx:id="birthDateColumn" prefWidth="150.0" text="BIRTH DATE" />
+            <TableColumn fx:id="specializationsCol" prefWidth="150.0" text="SPECIALIZATIONS" />
+        </columns>
+      </TableView>
+      <Text fx:id="physioHeader" fill="#d9ba1e" layoutX="59.0" layoutY="81.0" lineSpacing="2.0" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="3.0" style="-fx-fill: #d9ba1e;" text="PHYSIOTHERAPISTS">
+         <font>
+            <Font name="Courier New Bold" size="64.0" />
+         </font>
+      </Text>
+      <Button fx:id="assignButton" layoutX="1099.0" layoutY="699.0" minHeight="50.0" minWidth="148.0" mnemonicParsing="false" onAction="#handleAssignButton" prefHeight="80.0" prefWidth="148.0" stylesheets="@styles/main-style.css" text="Assign" textFill="#d9ba1e" AnchorPane.rightAnchor="53.0">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="assignButtonImg" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+
+      </Button>
+      <Text fx:id="validationAlert" fill="#e10404" layoutX="426.0" layoutY="743.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="RIGHT" visible="false" wrappingWidth="654.0625">
+         <font>
+            <Font name="Courier New Bold" size="17.0" />
+         </font>
+      </Text>
+      <ListView fx:id="physioTreatmentsList" layoutX="787.0" layoutY="287.0" prefHeight="270.0" prefWidth="460.0" stylesheets="@styles/main-style.css" AnchorPane.rightAnchor="53.0" />
+      <Text fx:id="treatmentsHeader1" fill="#d9ba1e" layoutX="787.0" layoutY="281.0" lineSpacing="2.0" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="3.0" style="-fx-fill: #d9ba1e;" text="PHYSIOTHERAPIST'S TREATMENTS" textAlignment="CENTER" wrappingWidth="460.0">
+         <font>
+            <Font name="Courier New Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button fx:id="returnButton" layoutX="53.0" layoutY="699.0" minHeight="50.0" minWidth="148.0" mnemonicParsing="false" onAction="#handleReturnButton" prefHeight="80.0" prefWidth="148.0" stylesheets="@styles/main-style.css" text="Return" textFill="#d9ba1e">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="assignButtonImg1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane fx:id="selectedPane" layoutX="53.0" layoutY="130.0" prefHeight="97.0" prefWidth="1194.0" stylesheets="@styles/main-style.css" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.0">
+         <children>
+            <Text fx:id="textFollowingTreatmentLabel" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASSIGN PHYSIOTHERAPIST TO THE FOLLOWING TREATMENT:" textAlignment="CENTER" wrappingWidth="1194.0">
+               <font>
+                  <Font name="Courier New Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="textFollowingTreatment" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOLLOWING TREATMENT" textAlignment="CENTER" wrappingWidth="1194.0">
+               <font>
+                  <Font name="Courier New Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="successInfo" fill="#36b52b" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="1194.0">
+               <font>
+                  <Font name="Courier New Bold" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+
+   </children>
+</AnchorPane>
